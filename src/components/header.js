@@ -8,12 +8,13 @@ import React from "react"
 import "./header.css"
 import NavBar from "./Navbar/NavBar"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle }, props) => (
   <header>
     <NavBar />
     <h3>- Established 1996 -</h3>
     <h1>Shri Vitthal Hindu Mandir</h1>
     <FontAwesomeIcon icon={faAngleDown} />
+
   </header>
 )
 

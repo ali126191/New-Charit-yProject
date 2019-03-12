@@ -12,61 +12,64 @@ import Img from "gatsby-image"
  * - `gatsby-image`: https://gatsby.dev/gatsby-image
  * - `StaticQuery`: https://gatsby.dev/staticquery
  */
-const SINGLE_IMAGE = graphql`
-      {
-        img1: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        },
-        img2: file(relativePath: { eq: "gatsby-icon.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        },
-        img3: file(relativePath: { eq: "google-nonprofit.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `
-const Image = () => (
-  <StaticQuery
-    query={SINGLE_IMAGE}
-    render={data => {
-      const img1 = data.img1.childImageSharp.fluid;
-      const img2 = data.img2.childImageSharp.fluid;
-      const img3 = data.img3.childImageSharp.fluid;
-      return (
-        <>
-          <div className="item">
-            <Img fluid={img1} />
-            <p className="info">aswome pizza</p>
 
-          </div>
-          <div className="item">
-            <Img fluid={img2} />
-            <p className="info">aswome pizza</p>
-          </div>
-          <div className="item">
-            <Img fluid={img3} />
-            <p className="info">aswome pizza</p>
-          </div>
-          {/* </GalleryWrapper> */}
-        </>
-      )
-    }}
-  />
-)
-export default Image
 
-// < Img fluid = { data.placeholderImage.childImageSharp.fluid } />
 
-// const GalleryWrapper = style.div`background`
+// const SINGLE_IMAGE = graphql`
+//         {
+//           img1: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+//             childImageSharp {
+//               fluid(maxWidth:500) {
+//                 ...GatsbyImageSharpFluid
+//               }
+//             }
+//           }`
+
+
+// const SINGLE_IMAGE = graphql`
+//         {
+//           img1: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+//             childImageSharp {
+//               fluid(maxWidth:500) {
+//                 ...GatsbyImageSharpFluid
+//               }
+//             }
+//           },
+//           img2: file(relativePath: { eq: "gatsby-icon.png" }) {
+//             childImageSharp {
+//               fluid(maxWidth:500) {
+//                 ...GatsbyImageSharpFluid
+//               }
+//             }
+//           },
+//           img3: file(relativePath: { eq: "person.jpg" }) {
+//             childImageSharp {
+//               fluid(maxWidth:500) {
+//                 ...GatsbyImageSharpFluid
+//               }
+//             }
+//           },
+//         }
+//       `
+
+// export default function Gallery() {
+//   return (
+//     <StaticQuery
+//       query={SINGLE_IMAGE}
+//       render={data => {
+//         const img1 = data.img1.childImageSharp.fluid;
+//         // const img2 = data.img2.childImageSharp.fluid;
+//         // const img3 = data.img3.childImageSharp.fluid;
+//         return (
+//           <>
+//             <Img fluid={img1} />
+//             {/* <Img fluid={img2} />
+//             <Img fluid={img3} /> */}
+//           </>
+//         )
+//       }}
+//     />
+//   )
+// }
+
+

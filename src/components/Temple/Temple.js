@@ -1,15 +1,9 @@
+import React, { Component } from "react"
 import "./Temple.css"
 
-import React, { Component } from "react"
-import Img from 'gatsby-image'
 
-export default class Temple extends Component {
-  constructor(props) {
-    super(props)
-  }
-  componentDidMount() {
-    window.pageExitTime = 1000
-  }
+class Temple extends Component {
+
   render() {
     return (
       <>
@@ -33,10 +27,10 @@ export default class Temple extends Component {
             values, and where I can peacefully pray."
           </p>
           <div className="bottom">
-            {/* <img
+            <img
               src="https://shrivitthal.com/wp-content/uploads/2018/02/25497478040_140ce47f31_k.jpg"
               alt=""
-            /> */}
+            />
             <div className="name">
               <h4>TSERING WANGCHUK</h4>
               <h6>Tibetan-Canadian</h6>
@@ -70,3 +64,5 @@ export default class Temple extends Component {
     )
   }
 }
+
+export default Temple

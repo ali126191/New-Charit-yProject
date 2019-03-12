@@ -1,6 +1,6 @@
 import React from "react"
 
-export default function Events() {
+const Events = () => {
   return (
     <>
       <hr />
@@ -9,3 +9,5 @@ export default function Events() {
     </>
   )
 }
+
+export default Events
